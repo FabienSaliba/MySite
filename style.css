@@ -8,12 +8,12 @@
 
 }
 #scoreText {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
     font-size: 100px;
 }
 
 button {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
     font-size: 22px;
     width: auto;
     height: 50px;
@@ -44,7 +44,7 @@ body {
 }
 
 #scoreBoard {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
     font-size: 40px;
     padding: 40px;
 }
@@ -89,7 +89,7 @@ body {
 
 .header {
     text-decoration: none;
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
     color: blueviolet;
     font-size: 2.6em;
     background-color: yellow;
@@ -139,7 +139,7 @@ header {
 }
 
 h1 {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
     text-align: center;
     font-size: 5em;
 }
@@ -150,7 +150,7 @@ h1 {
 }
 
 * {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Comic sans ms";
 }
 
 #ville {
