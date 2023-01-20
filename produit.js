@@ -8,7 +8,7 @@ function findProduct(event) {
     const keyPressed = event.keyCode;
     if (keyPressed == 13) {
 
-        fetch(`https://world.openfoodfacts.org/api/v0/product/${input.value}.json}`, {
+        fetch(`https://world.openfoodfacts.org/api/v0/product/${input.value}.json`, {
                 method: 'GET',
                 headers: {
                     'Accept': 'application/json',

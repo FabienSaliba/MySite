@@ -219,11 +219,17 @@ function buttonClickGET1() {
         .then(data => {
 
 
-            var name = ville[1];
-            var temp = data["forecast"][0]["temp2m"];
+            console.log(data)
+            var name = data["city"]["name"];
+            var temp = data["forecast"][2]["temp2m"];
+            var condtion = data["forecast"][2]["weather"];
             document.querySelector("#ville").innerHTML = `La température à ${name} est de ${temp}°C`;
-            console.log(name)
-            console.log(temp)
+            for (let i = 0; i < 235; i++) {
+                if (condtion == i) {
+                    document.querySelector("#condition").innerHTML = `${WEATHER[i]}`;
+
+                }
+            }
         })
 }
 
@@ -247,11 +253,17 @@ function buttonClickGET2() {
         .then(data => {
 
 
-            var name = ville[2];
-            var temp = data["forecast"][0]["temp2m"];
+            console.log(data)
+            var name = data["city"]["name"];
+            var temp = data["forecast"][2]["temp2m"];
+            var condtion = data["forecast"][2]["weather"];
             document.querySelector("#ville").innerHTML = `La température à ${name} est de ${temp}°C`;
-            console.log(name)
-            console.log(temp)
+            for (let i = 0; i < 235; i++) {
+                if (condtion == i) {
+                    document.querySelector("#condition").innerHTML = `${WEATHER[i]}`;
+
+                }
+            }
         })
 }
 
@@ -275,11 +287,17 @@ function buttonClickGET3() {
         .then(data => {
 
 
-            var name = ville[3];
-            var temp = data["forecast"][0]["temp2m"];
+            console.log(data)
+            var name = data["city"]["name"];
+            var temp = data["forecast"][2]["temp2m"];
+            var condtion = data["forecast"][2]["weather"];
             document.querySelector("#ville").innerHTML = `La température à ${name} est de ${temp}°C`;
-            console.log(name)
-            console.log(temp)
+            for (let i = 0; i < 235; i++) {
+                if (condtion == i) {
+                    document.querySelector("#condition").innerHTML = `${WEATHER[i]}`;
+
+                }
+            }
         })
 }
 
@@ -303,10 +321,16 @@ function buttonClickGET4() {
         .then(data => {
 
 
-            var name = ville[4];
-            var temp = data["forecast"][0]["temp2m"];
+            console.log(data)
+            var name = data["city"]["name"];
+            var temp = data["forecast"][2]["temp2m"];
+            var condtion = data["forecast"][2]["weather"];
             document.querySelector("#ville").innerHTML = `La température à ${name} est de ${temp}°C`;
-            console.log(name)
-            console.log(temp)
+            for (let i = 0; i < 235; i++) {
+                if (condtion == i) {
+                    document.querySelector("#condition").innerHTML = `${WEATHER[i]}`;
+
+                }
+            }
         })
 }
