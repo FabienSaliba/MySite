@@ -97,7 +97,7 @@ WEATHER = {
 function findCity(event) {
 
     const keyPressed = event.keyCode;
-    if (keyPressed == 13) {
+    if (13 == 13) {
         document.querySelector(`#ville1`).innerHTML = "";
         document.querySelector(`#ville2`).innerHTML = "";
         document.querySelector(`#ville3`).innerHTML = "";
@@ -122,43 +122,44 @@ function findCity(event) {
 
             .then(info => {
 
-                for (let i = 0; i < info.length; i++) {
-                    console.log(info.length)
-                    ville[i] = info[i]["nom"];
-                    codeTab[i] = info[i]["code"];
-                }
-                if (info.length >= 5) {
-                    document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
-                    document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
-                    document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
-                    document.querySelector(`#ville4`).innerHTML = `<button onclick="buttonClickGET3()">${ville[3]}: ${codeTab[3]}`;
-                    document.querySelector(`#ville5`).innerHTML = `<button onclick="buttonClickGET4()">${ville[4]}: ${codeTab[4]}`;
-
-                } else if (info.length == 4) {
-                    document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
-                    document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
-                    document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
-                    document.querySelector(`#ville4`).innerHTML = `<button onclick="buttonClickGET3()">${ville[3]}: ${codeTab[3]}`;
-                } else if (info.length == 3) {
-                    document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
-                    document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
-                    document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
-                } else if (info.length == 2) {
-                    document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
-                    document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
+                if (info.length == 0) {
+                    document.querySelector("#ville").innerHTML = `Pas de ville de ce nom`;
 
                 } else {
-                    document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                    for (let i = 0; i < info.length; i++) {
+
+                        ville[i] = info[i]["nom"];
+                        codeTab[i] = info[i]["code"];
+                    }
+                    if (info.length >= 5) {
+                        document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                        document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
+                        document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
+                        document.querySelector(`#ville4`).innerHTML = `<button onclick="buttonClickGET3()">${ville[3]}: ${codeTab[3]}`;
+                        document.querySelector(`#ville5`).innerHTML = `<button onclick="buttonClickGET4()">${ville[4]}: ${codeTab[4]}`;
+
+                    } else if (info.length == 4) {
+                        document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                        document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
+                        document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
+                        document.querySelector(`#ville4`).innerHTML = `<button onclick="buttonClickGET3()">${ville[3]}: ${codeTab[3]}`;
+                    } else if (info.length == 3) {
+                        document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                        document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
+                        document.querySelector(`#ville3`).innerHTML = `<button onclick="buttonClickGET2()">${ville[2]}: ${codeTab[2]}`;
+                    } else if (info.length == 2) {
+                        document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                        document.querySelector(`#ville2`).innerHTML = `<button onclick="buttonClickGET1()">${ville[1]}: ${codeTab[1]}`;
+
+                    } else {
+                        document.querySelector(`#ville1`).innerHTML = `<button onclick="buttonClickGET0()">${ville[0]}: ${codeTab[0]}`;
+                    }
                 }
 
-                const tab = ville.concat(codeTab);
 
-                return tab;
 
             })
     }
-
-
 
 }
 

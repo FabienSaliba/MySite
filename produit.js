@@ -18,10 +18,15 @@ function findProduct(event) {
 
             .then(info => {
                 console.log(info)
-                nom = info["product"]["abbreviated_product_name_fr"];
-                marque = info["product"]["brands"]
-                categories = info["product"]["categories"]
-                document.querySelector("#resultProduit").innerHTML = `Le produit est: ${nom} de la marque ${marque}<br>Les catégories sont:<br>               ${categories}`
+                if (info["status"] == 0) {
+                    document.querySelector("#resultProduit").innerHTML = `Le produit n'existe pas`
+                } else {
+                    nom = info["product"]["abbreviated_product_name_fr"];
+                    marque = info["product"]["brands"]
+                    categories = info["product"]["categories"]
+                    document.querySelector("#resultProduit").innerHTML = `Le produit est: ${nom} de la marque ${marque}<br>Les catégories sont:<br>${categories}`
+
+                }
             })
     }
 }
