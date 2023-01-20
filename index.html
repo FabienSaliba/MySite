@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accueil</title>
+</head>
+<header>
+    <div>
+        <a class="header" href="index.html">Accueil</a>
+        <a class="header" href="snake.html">Snake</a>
+        <a class="header" href="meteo.html">Météo</a>
+        <a class="header" href="morpion.html">Morpion</a>
+    </div>
+    <div>
+        <a class="header" href="register.html">Se déconnecter</a>
+    </div>
+ 
+
+</header>
+
+<body>
+        <h1 id="accueil">
+            Voici le Meilleur Site
+        </h1>
+        <div class="btn-carrousel">
+            <button class="Previous" onclick="previous()">Previous</button>
+            <button class="Next" onclick="next()">Next</button>
+        </div>
+        <div id="carrousel">
+            <a href="snake.html">
+                <img src="images/snake.jpg" class="carousel-image" id="image1">
+               </a>
+            <a href="meteo.html">
+                <img src="images/meteo.jpg" class="carousel-image" id="image2">
+            </a>
+            <a href="morpion.html">
+                <img src="images/morpion.jpg" class="carousel-image" id="image3">
+            </a>
+            
+        </div>
+    </div>
+    </div>
+
+    <script src="carousel.js"></script>
+
+</body>
+
+</html>
