@@ -45,7 +45,7 @@ body {
 }
 
 #scoreBoard {
-    font-family: "Comic sans ms";
+    font-family: "Comic sans ms", sans-serif, cursive;
     font-size: 40px;
     padding: 40px;
 }
@@ -76,7 +76,7 @@ body {
 .carousel-image {
     height: 230px;
     padding: 10px;
-    transition: transform 1.5s
+    transition: all 1.5s
 }
 
 .container:hover {
@@ -236,4 +236,8 @@ input {
 
 #imgmeteo {
     height: 200px !important;
+}
+
+#accueil {
+    color: black;
 }
